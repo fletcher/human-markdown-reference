@@ -38,7 +38,11 @@
     
     <div class="section">
       <table>
-        <tr>
+      <tr>
+          <th>Markdown</th>
+          <th>Result</th>
+      </tr>
+     <tr>
           <td>Link to [Google](http://google.com).</td>
           <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
         </tr>
@@ -77,24 +81,40 @@
       </table>
     </div>
     
-    <h2 class="section-name">Quotes</h2>
+    <h2 class="section-name">Blockquotes</h2>
     
     <div class="section">
       <table>
-        <tr class="alternate">
-          <td>
-            > This is the first level of quoting.<br />
-            >> This is nested blockquote.<br />
-            > Back to the first level.
+      <tr>
+          <th>Markdown</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>Here is the a normal paragraph.<br />
+<br />
+> This is the first level of quoting.<br />
+<br />
+>> This is nested blockquote.<br />
+<br />
+> Back to the first level.<br />
+<br />
+Notice the spaces when we start a new paragraph or separate the different blockquotes.
           </td>
           <td>
-            <blockquote>
-              This is the first level of quoting.
-              <blockquote>
-                This is nested blockquote.
-              </blockquote>
-              Back to the first level.
-            </blockquote>
+          <p>Here is the a normal paragraph.</p>
+
+<blockquote>
+<p>This is the first level of quoting.</p>
+
+<blockquote>
+<p>This is nested blockquote.</p>
+</blockquote>
+
+<p>Back to the first level.</p>
+</blockquote>
+
+<p>Notice the spaces when we start a new paragraph or separate the different blockquotes.</p>
+
           </td>
         </tr>        
       </table>
@@ -163,17 +183,35 @@
     
     <div class="section">
       <table>
-        <tr>
-          <td>Link to [Google](http://google.com).</td>
-          <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
+      <tr>
+          <th>Markdown</th>
+          <th>Result</th>
         </tr>
         <tr>
-          <td>Send me an email at &lt;address@example.com&gt;.</td>
-          <td>Send me an email at <a href="mailto:address@example.com">address@example.com</a>.</td>
+          <td>This is the simplest example of an ![MultiMarkdown Composer Icon](images/app_icon.png) embedded in a paragraph.</td>
+          <td>This is the simplest example of an <img src="images/app_icon.png" alt="MultiMarkdown Composer Icon" /> embedded in a paragraph.</td>
+        </tr>
+        <tr class="alternate">
+          <td>This is an image example with a title attribute ![Alternate Message](images/app_icon.png "This is a title") embedded in a paragraph.</td>
+          <td>This is an image example with a title attribute <img src="images/app_icon.png" alt="Alternate Message" title="This is a title" /> embedded in a paragraph.</td>
         </tr>
         <tr>
-          <td>![37signals logo](http://www.37signals.com/images/logo-37signals.png)</td>
-          <td><img src="http://www.37signals.com/images/logo-37signals.png" alt="37signals logo" /></td>
+          <td>This is the same image ![image3][] but with the attributes placed later on in the document.<br />
+<br />
+[image3]: images/app_icon.png "This is where the title goes" height=40px width=40px</td>
+          <td>This is the same image <img src="images/app_icon.png" alt="image3" id="image3" title="This is where the title goes" style="height:40px;width:40px;" /> but with the attributes placed later on in the document.</td>
+        </tr>
+        <tr class="alternate">
+          <td>When an image is placed in a paragraph, it is wrapped in a &lt;figure&gt; tag
+
+![This is the figure caption][fig_id]
+
+[fig_id]: images/app_icon.png "This is where the title goes" height=80px width=80px</td>
+          <td><p>When an image is placed in a paragraph, it is wrapped in a &lt;figure&gt; tag</p>
+
+<figure>
+<img src="images/app_icon.png" alt="This is the figure caption" id="fig_id" title="This is where the title goes" style="height:80px;width:80px;" />
+<figcaption>This is the figure caption</figcaption></figure></td>
         </tr>
       </table>
     </div>
@@ -182,6 +220,10 @@
     
     <div class="section">
       <table>
+        <tr>
+          <th>Markdown</th>
+          <th>Result</th>
+        </tr>
         <tr>
           <td>Link to [Google](http://google.com).</td>
           <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
@@ -201,6 +243,10 @@
     
     <div class="section">
       <table>
+        <tr>
+          <th>Markdown</th>
+          <th>Result</th>
+        </tr>
         <tr>
           <td>Link to [Google](http://google.com).</td>
           <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
@@ -222,6 +268,10 @@
     <div class="section">
       <table>
         <tr>
+          <th>Markdown</th>
+          <th>Result</th>
+        </tr>
+        <tr>
           <td>Link to [Google](http://google.com).</td>
           <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
         </tr>
@@ -239,6 +289,10 @@
     
     <div class="section">
       <table>
+        <tr>
+          <th>Markdown</th>
+          <th>Result</th>
+        </tr>
         <tr>
           <td>Link to [Google](http://google.com).</td>
           <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
@@ -258,6 +312,10 @@
     <div class="section">
       <table>
         <tr>
+          <th>Markdown</th>
+          <th>Result</th>
+        </tr>
+        <tr>
           <td>Link to [Google](http://google.com).</td>
           <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
         </tr>
@@ -276,6 +334,10 @@
     
     <div class="section">
       <table>
+        <tr>
+          <th>Markdown</th>
+          <th>Result</th>
+        </tr>
         <tr>
           <td>Link to [Google](http://google.com).</td>
           <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
