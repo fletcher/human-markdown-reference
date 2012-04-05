@@ -28,8 +28,8 @@
           <td>This text is <em>italicized</em>.</td>
         </tr>
         <tr>
-          <td>`This is some code.`</td>
-          <td><code>This is some code.</code></td>
+          <td>`This is some inline code.`</td>
+          <td><code>This is some inline code.</code></td>
         </tr>
       </table>
     </div>
@@ -44,11 +44,11 @@
       </tr>
      <tr>
           <td>Link to [Google](http://google.com).</td>
-          <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
+          <td>Link to <a href="http://google.com">Google</a>.</td>
         </tr>
                 <tr class="alternate">
-          <td>Link to [Google][] with attributes later in the document.<br/><br/>[Google]: http://google.com</td>
-          <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
+          <td>Link to [Google][] with attributes later in the document.<br/><br/>[Google]: http://google.com "The Google!" style="border: solid black 1px;" target="_blank"</td>
+          <td><p>Link to <a href="http://google.com" title="The Google!" style="border: solid black 1px;" target="_blank">Google</a> with attributes later in the document.</p></td>
         </tr>
         <tr>
           <td>Send me an email at &lt;address@example.com&gt;.</td>
@@ -225,16 +225,104 @@ Notice the spaces when we start a new paragraph or separate the different blockq
           <th>Result</th>
         </tr>
         <tr>
-          <td>Link to [Google](http://google.com).</td>
-          <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
-        </tr>
-        <tr>
-          <td>Send me an email at &lt;address@example.com&gt;.</td>
-          <td>Send me an email at <a href="mailto:address@example.com">address@example.com</a>.</td>
-        </tr>
-        <tr>
-          <td>![37signals logo](http://www.37signals.com/images/logo-37signals.png)</td>
-          <td><img src="http://www.37signals.com/images/logo-37signals.png" alt="37signals logo" /></td>
+          <td>Here is as example of [table][simple_table] followed by a more complex [example][reference_table] from the [documentation](https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide "MultiMarkdown Syntax Guide") <br />
+<br />
+<pre>
+| First Header | Second Header |         Third Header |  
+| :----------- | :-----------: | -------------------: |  
+| First row    |      Data     | Very long data entry |  
+| Second row   |    **Cell**   |               *Cell* |  
+[simple_table]
+</pre>
+
+<pre>
+| 	|          Grouping 	||
+First Header 	| Second Header 	| Third Header 	|
+ ------------ 	| :-----------: 	| -----------: 	|
+Content 	|          *Long Cell* 	||
+Content 	|   **Cell** 	|         Cell 	|
+New section 	|     More 	|         Data 	|
+And more 	|            And more 	|
+[Prototype table][reference_table]
+</pre></td>
+          <td><p>Here is as example of <a href="#simple_table">table</a> followed by a more complex <a href="#reference_table">example</a> from the <a href="https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide" title="MultiMarkdown Syntax Guide">documentation</a></p>
+
+<table>
+<caption id="simple_table">simple_table</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:center;"/>
+<col style="text-align:right;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">First Header</th>
+	<th style="text-align:center;">Second Header</th>
+	<th style="text-align:right;">Third Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">First row</td>
+	<td style="text-align:center;">Data</td>
+	<td style="text-align:right;">Very long data entry</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Second row</td>
+	<td style="text-align:center;"><strong>Cell</strong></td>
+	<td style="text-align:right;"><em>Cell</em></td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<caption id="reference_table">Prototype table</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:center;"/>
+<col style="text-align:right;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:center;" colspan="2">Grouping</th>
+</tr>
+<tr>
+	<th style="text-align:left;">First Header</th>
+	<th style="text-align:center;">Second Header</th>
+	<th style="text-align:right;">Third Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Content</td>
+	<td style="text-align:center;" colspan="2"><em>Long Cell</em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Content</td>
+	<td style="text-align:center;"><strong>Cell</strong></td>
+	<td style="text-align:right;">Cell</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">New section</td>
+	<td style="text-align:center;">More</td>
+	<td style="text-align:right;">Data</td>
+</tr>
+<tr>
+	<td style="text-align:left;">And more</td>
+	<td style="text-align:center;">And more</td>
+</tr>
+</tbody>
+</table>
+</td>
         </tr>
       </table>
     </div>
@@ -248,16 +336,63 @@ Notice the spaces when we start a new paragraph or separate the different blockq
           <th>Result</th>
         </tr>
         <tr>
-          <td>Link to [Google](http://google.com).</td>
-          <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
+          <td>Here is some text containing a footnote[^somesamplefootnote]. You can follow continue to write *other* **tags** and [links](www.google.com) and…<br />
+<br />
+[^somesamplefootnote]: Here is the text of the footnote itself.<br />
+<br />
+Even go to a new paragraph and the footnotes with go to the bottom of the document[^documentdetails].<br />
+<br />
+[^documentdetails]: Depending on the final form of your document, of course. See the documentation and experiment.</td>
+          <td><p>Here is some text containing a footnote<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a>. You can follow continue to write <em>other</em> <strong>tags</strong> and <a href="www.google.com">links</a> and…</p>
+
+<p>Even go to a new paragraph and the footnotes with go to the bottom of the document<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a>.</p>
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>Here is the text of the footnote itself. <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:2">
+<p>Depending on the final form of your document, of course. See the documentation and experiment. <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div></td>
+        </tr>
+      </table>
+    </div>
+
+         <h2 class="section-name">Cross Reference</h2>
+    
+    <div class="section">
+      <table>
+        <tr>
+          <th>Markdown</th>
+          <th>Result</th>
         </tr>
         <tr>
-          <td>Send me an email at &lt;address@example.com&gt;.</td>
-          <td>Send me an email at <a href="mailto:address@example.com">address@example.com</a>.</td>
-        </tr>
-        <tr>
-          <td>![37signals logo](http://www.37signals.com/images/logo-37signals.png)</td>
-          <td><img src="http://www.37signals.com/images/logo-37signals.png" alt="37signals logo" /></td>
+          <td>You can place a have a link to another point in your document like this [one][] or you can take you to [another][] place in the doc.<br />
+<br />
+## one ##<br />
+<br />
+A simple subheading in a larger document with the same name as the referring tag.<br />
+<br />
+## Another place in the document [another] ##<br />
+<br />
+Another place in the document that is referenced by the [another] tag in the heading<br />
+</td>
+          <td><p>You can place a have a link to another point in your document like this <a href="#one">one</a> or you can take you to <a href="#another">another</a> place in the doc.</p>
+
+<h2 id="one">one</h2>
+
+<p>A simple subheading in a larger document with the same name as the referring tag.</p>
+
+<h2 id="another">Another place in the document</h2>
+
+<p>Another place in the document that is referenced by the &#91;another&#93; tag in the heading</p>
+</td>
         </tr>
       </table>
     </div>
