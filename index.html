@@ -236,13 +236,13 @@ Notice the spaces when we start a new paragraph or separate the different blockq
 </pre>
 
 <pre>
-| 	|          Grouping 	||
-First Header 	| Second Header 	| Third Header 	|
- ------------ 	| :-----------: 	| -----------: 	|
-Content 	|          *Long Cell* 	||
-Content 	|   **Cell** 	|         Cell 	|
-New section 	|     More 	|         Data 	|
-And more 	|            And more 	|
+|              | Grouping                    ||  
+| First Header | Second Header | Third Header |  
+| ------------ | :-----------: | -----------: |  
+| Content      | *Long Cell*                 ||  
+| Content      | **Cell**      | Cell         |  
+| New section  | More          | Data         |  
+| And more     | And more      |  
 [Prototype table][reference_table]
 </pre></td>
           <td><p>Here is as example of <a href="#simple_table">table</a> followed by a more complex <a href="#reference_table">example</a> from the <a href="https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide" title="MultiMarkdown Syntax Guide">documentation</a></p>
@@ -429,16 +429,41 @@ Another place in the document that is referenced by the [another] tag in the hea
           <th>Result</th>
         </tr>
         <tr>
-          <td>Link to [Google](http://google.com).</td>
-          <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
-        </tr>
-        <tr>
-          <td>Send me an email at &lt;address@example.com&gt;.</td>
-          <td>Send me an email at <a href="mailto:address@example.com">address@example.com</a>.</td>
-        </tr>
-        <tr>
-          <td>![37signals logo](http://www.37signals.com/images/logo-37signals.png)</td>
-          <td><img src="http://www.37signals.com/images/logo-37signals.png" alt="37signals logo" /></td>
+          <td>When you are making you definitions you should note the white space.
+<pre>Apple
+:   Pomaceous fruit of plants of the genus Malus in 
+    the family Rosaceae.
+
+    Also the makers of really great products.
+
+Banana
+:   1. A delicious fruit that can be hazardous if left on the ground.
+
+    2. A fruit that comes with it's own packaging
+
+Orange
+:   The fruit of an evergreen tree of the genus Citrus.
+</pre>
+</td>
+          <td><p>When you are making you definitions you should note the white space.</p>
+<dl>
+<dt>Apple</dt>
+<dd>
+<p>Pomaceous fruit of plants of the genus Malus in
+ the family Rosaceae.</p>
+
+<p>Also the makers of really great products.</p></dd>
+
+<dt>Banana</dt>
+<dd>
+<ol>
+<li><p>A delicious fruit that can be hazardous if left on the ground.</p></li>
+<li><p>A fruit that comes with it&#8217;s own packaging</p></li>
+</ol></dd>
+
+<dt>Orange</dt>
+<dd>The fruit of an evergreen tree of the genus Citrus.</dd>
+</dl></td>
         </tr>
       </table>
     </div>
@@ -487,5 +512,21 @@ Another place in the document that is referenced by the [another] tag in the hea
         </tr>
       </table>
     </div>
+              <h2 class="section-name">Acknowledgement</h2>
+    
+    <div class="section">
+      <p>For the first interaction I took examples from the following websites.</p>
+<dl>
+<dt>Byword:</dt>
+<dd>http://bywordapp.com/markdown/guide.html</dd>
+
+<dt>PHP Markdown Extra:</dt>
+<dd>http://michelf.com/projects/php-markdown/extra</dd>
+
+<dt>MultiMarkdown Guide:</dt>
+<dd>https://github.com/fletcher/MultiMarkdown/blob/master/Documentation/MultiMarkdown%20User%27s%20Guide.md</dd>
+</dl>
+    </div>
+
   </body>
 </html>
