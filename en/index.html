@@ -1,53 +1,111 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>Markdown Guide</title>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-    <link href="../stylesheets/markdown-reference.css" rel="stylesheet" media="screen" type="text/css" />
-    <script src="../javascripts/jquery-1.4.2.min.js" type="text/javascript"></script>
-    <script src="../javascripts/guide.js" type="text/javascript"></script>
+    <title>MultiMarkdown Guide</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../markdown-reference.css" />
+    <script type="text/javascript" src="../javascripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../javascripts/guide.js"></script>
   </head>
   <body>
     
-    <h1 id="title">Markdown Guide</h1>
+    <h1 id="title">MultiMarkdown Guide</h1>
     
     <h2 class="section-name">Text</h2>
     
     <div class="section">
       <table>
         <tr>
-          <th>Markdown</th>
+          <th>MultiMarkdown</th>
           <th>Result</th>
         </tr>
         <tr>
           <td>This text is **bold**.</td>
           <td>This text is <strong>bold</strong>.</td>
         </tr>
-        <tr class="alternate">
+        <tr>
+          <td>This text is also __bold__.</td>
+          <td>This text is also <strong>bold</strong>.</td>
+        </tr>
+        <tr>
           <td>This text is *italicized*.</td>
           <td>This text is <em>italicized</em>.</td>
+        </tr>
+        <tr>
+          <td>This text is also _italicized_.</td>
+          <td>This text is also <em>italicized</em>.</td>
         </tr>
         <tr>
           <td>`This is some code.`</td>
           <td><code>This is some code.</code></td>
         </tr>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;This is a rather<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;long section of code<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;taking multiple lines</td>
+          <td><code>This is a rather<br />
+          long section of code<br />
+          taking multiple lines</code></td>
+        </tr>
       </table>
     </div>
     
+  <h2 class="section-name">Links</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>Link to [Google](http://google.com).</td>
+
+        <td>Link to <a href="http://google.com">Google</a>.</td>
+      </tr>
+
+      <tr>
+        <td>Link to &lt;http://google.com&gt;.</td>
+
+        <td>Link to <a href="http://google.com">http://google.com</a>.</td>
+      </tr>
+
+      <tr>
+        <td>Link to [Google][] with attributes later in the document.<br />
+        <br />
+        Another Link to the [search engine][Google].<br /><br />
+        [Google]: http://google.com "The Google!" style="border: solid black 1px;" target="_blank"</td>
+
+        <td>
+          <p>Link to <a href="http://google.com" title="The Google!" style="border: solid black 1px;" target="_blank">Google</a> with attributes later in the document.</p>
+          <p>Another link to the <a href="http://google.com" title="The Google!" style="border: solid black 1px;" target="_blank">search engine</a>.</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Send me an email at &lt;address@example.com&gt;.</td>
+
+        <td>Send me an email at <a href="mailto:address@example.com">address@example.com</a>.</td>
+      </tr>
+    </table>
+  </div>
+  
     <h2 class="section-name">Headings</h2>
     
     <div class="section">
       <table>
         <tr>
-          <th>Markdown</th>
+          <th>MultiMarkdown</th>
           <th>Result</th>
         </tr>
         <tr>
           <td># First Header</td>
           <td><h1>First Header</h1></td>
         </tr>
-        <tr class="alternate">
-          <td>## Second Header</td>
+        <tr>
+          <td>## Second Header ##</td>
           <td><h2>Second Header</h2></td>
         </tr>
         <tr>
@@ -57,54 +115,93 @@
       </table>
     </div>
     
-    <h2 class="section-name">Quotes</h2>
-    
-    <div class="section">
-      <table>
-        <tr class="alternate">
-          <td>
-            > This is the first level of quoting.<br />
-            >> This is nested blockquote.<br />
-            > Back to the first level.
-          </td>
-          <td>
+<h2 class="section-name">Blockquotes</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>Here is the a normal paragraph.<br />
+        <br />
+        &gt; This is the first level of quoting.<br />
+        <br />
+        &gt;&gt; This is nested blockquote<br />
+        that runs onto the next line.<br />
+        <br />
+        &gt; Back to the first level.<br />
+        <br />
+        Notice the spaces when we start a new paragraph or separate the different blockquotes.</td>
+
+        <td>
+          <p>Here is the a normal paragraph.</p>
+
+          <blockquote>
+            <p>This is the first level of quoting.</p>
+
             <blockquote>
-              This is the first level of quoting.
-              <blockquote>
-                This is nested blockquote.
-              </blockquote>
-              Back to the first level.
+              <p>This is nested blockquote that runs onto the next line.</p>
             </blockquote>
-          </td>
-        </tr>        
-      </table>
-    </div>
+
+            <p>Back to the first level.</p>
+          </blockquote>
+
+          <p>Notice the spaces when we start a new paragraph or separate the different blockquotes.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
     
-    <h2 class="section-name">Links and Images</h2>
-    
-    <div class="section">
-      <table>
-        <tr>
-          <td>Link to [Google](http://google.com).</td>
-          <td>Link to <a href="http://google.com" target="_blank">Google</a>.</td>
-        </tr>
-        <tr>
-          <td>Send me an email at <address@example.com>.</td>
-          <td>Send me an email at <a href="mailto:address@example.com">address@example.com</a>.</td>
-        </tr>
-        <tr>
-          <td>![37signals logo](http://www.37signals.com/images/logo-37signals.png)</td>
-          <td><img src="http://www.37signals.com/images/logo-37signals.png" alt="37signals logo" /></td>
-        </tr>
-      </table>
-    </div>
+  <h2 class="section-name">Images and Figures</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>This is the simplest example of an ![MultiMarkdown Composer Icon](images/app_icon.png) embedded in a paragraph.</td>
+
+        <td>This is the simplest example of an <img src="images/app_icon.png" alt="MultiMarkdown Composer Icon" /> embedded in a paragraph.</td>
+      </tr>
+
+      <tr>
+        <td>This is an image example with a title attribute ![Alternate Message](images/app_icon.png "This is a title") embedded in a paragraph.</td>
+
+        <td>This is an image example with a title attribute <img src="images/app_icon.png" alt="Alternate Message" title="This is a title" /> embedded in a paragraph.</td>
+      </tr>
+
+      <tr>
+        <td>This is the same image ![image3][] but with the attributes placed later on in the document.<br />
+        <br />
+        [image3]: images/app_icon.png "This is where the title goes" height=40px width=40px</td>
+
+        <td>This is the same image <img src="images/app_icon.png" alt="image3" id="image3" title="This is where the title goes" style="height:40px;width:40px;" /> but with the attributes placed later on in the document.</td>
+      </tr>
+
+      <tr>
+        <td>When an image is placed in a paragraph, it is wrapped in a &lt;figure&gt; tag ![This is the figure caption][fig_id] [fig_id]: images/app_icon.png "This is where the title goes" height=80px width=80px</td>
+
+        <td>
+          <p>When an image is placed in a paragraph, it is wrapped in a &lt;figure&gt; tag</p><img src="images/app_icon.png" alt="This is the figure caption" id="fig_id" title="This is where the title goes" style="height:80px;width:80px;" /> This is the figure caption
+        </td>
+      </tr>
+    </table>
+  </div>
     
     <h2 class="section-name">Lists</h2>
     
     <div class="section">
       <table>
         <tr>
-          <th>Markdown</th>
+          <th>MultiMarkdown</th>
           <th>Result</th>
         </tr>
         <tr>
@@ -112,8 +209,8 @@
             * Milk<br />
             * Bread<br />
             * Cheese<br />
-              * Cheddar<br />
-              * Camembert<br />
+            &nbsp;&nbsp;* Cheddar<br />
+            &nbsp;&nbsp;* Camembert<br />
             * Rice
           </td>
           <td>
@@ -130,13 +227,13 @@
             </ul>
           </td>
         </tr>
-        <tr class="alternate">
+        <tr>
           <td>
             1. Milk<br />
             2. Bread<br />
             3. Cheese<br />
-              1. Cheddar<br />
-              2. Camembert<br />
+            &nbsp;&nbsp;1. Cheddar<br />
+            &nbsp;&nbsp;2. Camembert<br />
             4. Rice
           </td>
           <td>
@@ -155,6 +252,398 @@
         </tr>
       </table>
     </div>
-            
+
+  <h2 class="section-name">Tables</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>
+          Here is as example of [table][simple_table] followed by a more complex [example][reference_table] from the [documentation](https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide "MultiMarkdown Syntax Guide")<br />
+          <br />
+          <pre>
+| First Header | Second Header |         Third Header |  
+| :----------- | :-----------: | -------------------: |  
+| First row    |      Data     | Very long data entry |  
+| Second row   |    **Cell**   |               *Cell* |  
+[simple_table]
+</pre>
+          <pre>
+|              | Grouping                    ||  
+| First Header | Second Header | Third Header |  
+| ------------ | :-----------: | -----------: |  
+| Content      | *Long Cell*                 ||  
+| Content      | **Cell**      | Cell         |  
+| New section  | More          | Data         |  
+| And more     | And more      |  
+[Prototype table][reference_table]
+</pre>
+        </td>
+
+        <td>
+          <p>Here is as example of <a href="#simple_table">table</a> followed by a more complex <a href="#reference_table">example</a> from the <a href="https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide" title="MultiMarkdown Syntax Guide">documentation</a></p>
+
+          <table>
+            <caption id="simple_table">
+              simple_table
+            </caption>
+
+            <colgroup>
+              <col style="text-align:left;" />
+              <col style="text-align:center;" />
+              <col style="text-align:right;" />
+            </colgroup>
+
+            <thead>
+              <tr>
+                <th style="text-align:left;">First Header</th>
+
+                <th style="text-align:center;">Second Header</th>
+
+                <th style="text-align:right;">Third Header</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td style="text-align:left;">First row</td>
+
+                <td style="text-align:center;">Data</td>
+
+                <td style="text-align:right;">Very long data entry</td>
+              </tr>
+
+              <tr>
+                <td style="text-align:left;">Second row</td>
+
+                <td style="text-align:center;"><strong>Cell</strong></td>
+
+                <td style="text-align:right;"><em>Cell</em></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table>
+            <caption id="reference_table">
+              Prototype table
+            </caption>
+
+            <colgroup>
+              <col style="text-align:left;" />
+              <col style="text-align:center;" />
+              <col style="text-align:right;" />
+            </colgroup>
+
+            <thead>
+              <tr>
+                <th style="text-align:left;"></th>
+
+                <th style="text-align:center;" colspan="2">Grouping</th>
+              </tr>
+
+              <tr>
+                <th style="text-align:left;">First Header</th>
+
+                <th style="text-align:center;">Second Header</th>
+
+                <th style="text-align:right;">Third Header</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td style="text-align:left;">Content</td>
+
+                <td style="text-align:center;" colspan="2"><em>Long Cell</em></td>
+              </tr>
+
+              <tr>
+                <td style="text-align:left;">Content</td>
+
+                <td style="text-align:center;"><strong>Cell</strong></td>
+
+                <td style="text-align:right;">Cell</td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <td style="text-align:left;">New section</td>
+
+                <td style="text-align:center;">More</td>
+
+                <td style="text-align:right;">Data</td>
+              </tr>
+
+              <tr>
+                <td style="text-align:left;">And more</td>
+
+                <td style="text-align:center;">And more</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="section-name">Footnotes</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>Here is some text containing a footnote[^somesamplefootnote]. You can then continue your thought...<br />
+        <br />
+        [^somesamplefootnote]: Here is the text of the footnote itself.<br />
+        <br />
+        Even go to a new paragraph and the footnotes with go to the bottom of the document[^documentdetails].<br />
+        <br />
+        [^documentdetails]: Depending on the final form of your document, of course. See the documentation and experiment.<br/><br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;This footnote has a second paragraph.</td>
+
+        <td>
+          <p>Here is some text containing a footnote<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a>. You can then continue your thought…</p>
+
+          <p>Even go to a new paragraph and the footnotes with go to the bottom of the document<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a>.</p>
+
+          <div class="footnotes">
+            <hr />
+
+            <ol>
+              <li id="fn:1">
+                <p>Here is the text of the footnote itself. <a href="#fnref:1" title="return to article" class="reversefootnote">&nbsp;↩</a></p>
+              </li>
+
+              <li id="fn:2">
+                <p>Depending on the final form of your document, of course. See the documentation and experiment.</p>
+<p>This footnote has a second paragraph.<a href="#fnref:2" title="return to article" class="reversefootnote">&nbsp;↩</a></p>
+              </li>
+            </ol>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="section-name">Cross Reference</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>You can place a have a link to another point in your document like this [one][] or you can take you to [another][] place in the doc.<br />
+        <br />
+        ## one ##<br />
+        <br />
+        A simple subheading in a larger document with the same name as the referring tag.<br />
+        <br />
+        ## Another place in the document [another] ##<br />
+        <br />
+        Another place in the document that is referenced by the [another] tag in the heading<br /></td>
+
+        <td>
+          <p>You can place a have a link to another point in your document like this <a href="#one">one</a> or you can take you to <a href="#another">another</a> place in the doc.</p>
+
+          <h2 id="one">one</h2>
+
+          <p>A simple subheading in a larger document with the same name as the referring tag.</p>
+
+          <h2 id="another">Another place in the document</h2>
+
+          <p>Another place in the document that is referenced by the [another] tag in the heading</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="section-name">Citations</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>Coming soon</td>
+
+        <td>Hopefully...</td>
+      </tr>
+
+    </table>
+  </div>
+
+  <h2 class="section-name">Definition Lists</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>
+          When you are making you definitions you should note the white space.
+          <pre>
+Apple
+:   Pomaceous fruit of plants of the genus Malus in 
+    the family Rosaceae.
+
+    Also the makers of really great products.
+
+Banana
+:   1. A delicious fruit that can be hazardous
+    if left on the ground.
+
+    2. A fruit that comes with it's own packaging
+
+Orange
+:   The fruit of an evergreen tree of the genus Citrus.
+</pre>
+        </td>
+
+        <td>
+          <p>When you are making you definitions you should note the white space.</p>
+
+          <dl>
+            <dt>Apple</dt>
+
+            <dd>
+              <p>Pomaceous fruit of plants of the genus Malus in the family Rosaceae.</p>
+
+              <p>Also the makers of really great products.</p>
+            </dd>
+
+            <dt>Banana</dt>
+
+            <dd>
+              <ol>
+                <li>
+                  <p>A delicious fruit that can be hazardous if left on the ground.</p>
+                </li>
+
+                <li>
+                  <p>A fruit that comes with it’s own packaging</p>
+                </li>
+              </ol>
+            </dd>
+
+            <dt>Orange</dt>
+
+            <dd>The fruit of an evergreen tree of the genus Citrus.</dd>
+          </dl>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="section-name">Math</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>\\[ {e}^{i\pi }+1=0 \\]</td>
+
+        <td><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+          <msup>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>e</mi>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+              <mi>&#x03C0;<!-- π --></mi>
+            </mrow>
+          </msup>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo>=</mo>
+          <mn>0</mn>
+        </math></td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="section-name">Glossary</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Result</th>
+      </tr>
+
+      <tr>
+        <td>Let's reference a glossary term.[^glossary]<br/><br/>
+        [^glossary]:glossary: Glossary
+        &nbsp;&nbsp;&nbsp;&nbsp;A section at the end ...</td>
+
+        <td><p>Let&#8217;s reference a glossary term.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote glossary">[1]</a></p>
+
+        <div class="footnotes">
+        <hr />
+        <ol>
+
+        <li id="fn:1">
+        <span class="glossary name">Glossary</span>: <p>A section at the end &#8230; <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+        </li>
+
+        </ol>
+        </div>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="section-name">Acknowledgement</h2>
+
+  <div class="section">
+    <p>Based on the Human Markdown Reference by Édouard Brière.</p>
+    <p>https://github.com/edouard/human-markdown-reference</p>
+    <p>Modified for MultiMarkdown syntax by the MMD Community.</p>
+    <p>For the first interaction I took examples from the following websites.</p>
+
+    <dl>
+      <dt>Byword:</dt>
+
+      <dd>http://bywordapp.com/markdown/guide.html</dd>
+
+      <dt>PHP Markdown Extra:</dt>
+
+      <dd>http://michelf.com/projects/php-markdown/extra</dd>
+
+      <dt>MultiMarkdown Guide:</dt>
+
+      <dd>https://github.com/fletcher/MultiMarkdown/blob/master/Documentation/MultiMarkdown%20User%27s%20Guide.md</dd>
+    </dl>
+  </div>            
   </body>
 </html>

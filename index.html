@@ -3,7 +3,7 @@
   <head>
     <title>MultiMarkdown Guide</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/markdown-reference.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="markdown-reference.css" />
     <script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="javascripts/guide.js"></script>
   </head>
@@ -75,12 +75,12 @@
       <tr>
         <td>Link to [Google][] with attributes later in the document.<br />
         <br />
-		Another Link to the [search engine][Google].<br /><br />
+        Another Link to the [search engine][Google].<br /><br />
         [Google]: http://google.com "The Google!" style="border: solid black 1px;" target="_blank"</td>
 
         <td>
           <p>Link to <a href="http://google.com" title="The Google!" style="border: solid black 1px;" target="_blank">Google</a> with attributes later in the document.</p>
-		  <p>Another link to the <a href="http://google.com" title="The Google!" style="border: solid black 1px;" target="_blank">search engine</a>.</p>
+          <p>Another link to the <a href="http://google.com" title="The Google!" style="border: solid black 1px;" target="_blank">search engine</a>.</p>
         </td>
       </tr>
 
@@ -131,7 +131,7 @@
         &gt; This is the first level of quoting.<br />
         <br />
         &gt;&gt; This is nested blockquote<br />
-		that runs onto the next line.<br />
+        that runs onto the next line.<br />
         <br />
         &gt; Back to the first level.<br />
         <br />
@@ -411,7 +411,7 @@
         Even go to a new paragraph and the footnotes with go to the bottom of the document[^documentdetails].<br />
         <br />
         [^documentdetails]: Depending on the final form of your document, of course. See the documentation and experiment.<br/><br/>
-		&nbsp;&nbsp;&nbsp;&nbsp;This footnote has a second paragraph.</td>
+        &nbsp;&nbsp;&nbsp;&nbsp;This footnote has a second paragraph.</td>
 
         <td>
           <p>Here is some text containing a footnote<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a>. You can then continue your thought…</p>
@@ -484,9 +484,24 @@
       </tr>
 
       <tr>
-        <td>Coming soon</td>
+        <td>Let's cite a fake book.[p. 42][#fake]<br/>
+        <br/>
+        [#fake]: John Doe. *A Totally Fake Book*.  Vanity Press, 2006.
+        </td>
 
-        <td>Hopefully...</td>
+        <td><p>Let&#8217;s cite a fake book.<a class="citation" href="#fn:1" title="Jump to citation">[<span class="locator">p. 42</span>, 1]<span class="citekey" style="display:none">fake</span></a></p>
+
+        <div class="footnotes">
+        <hr />
+        <ol>
+
+        <li id="fn:1" class="citation"><span class="citekey" style="display:none">fake</span><p>John Doe. <em>A Totally Fake Book</em>. Vanity Press, 2006.</p>
+        </li>
+
+        </ol>
+        </div>
+
+        </td>
       </tr>
 
     </table>
@@ -513,7 +528,8 @@ Apple
     Also the makers of really great products.
 
 Banana
-:   1. A delicious fruit that can be hazardous if left on the ground.
+:   1. A delicious fruit that can be hazardous
+    if left on the ground.
 
     2. A fruit that comes with it's own packaging
 
@@ -571,20 +587,20 @@ Orange
         <td>\\[ {e}^{i\pi }+1=0 \\]</td>
 
         <td><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-		  <msup>
-		    <mrow class="MJX-TeXAtom-ORD">
-		      <mi>e</mi>
-		    </mrow>
-		    <mrow class="MJX-TeXAtom-ORD">
-		      <mi>i</mi>
-		      <mi>&#x03C0;<!-- π --></mi>
-		    </mrow>
-		  </msup>
-		  <mo>+</mo>
-		  <mn>1</mn>
-		  <mo>=</mo>
-		  <mn>0</mn>
-		</math></td>
+          <msup>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>e</mi>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+              <mi>&#x03C0;<!-- π --></mi>
+            </mrow>
+          </msup>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo>=</mo>
+          <mn>0</mn>
+        </math></td>
       </tr>
     </table>
   </div>
@@ -601,23 +617,23 @@ Orange
 
       <tr>
         <td>Let's reference a glossary term.[^glossary]<br/><br/>
-		[^glossary]:glossary: Glossary
-		&nbsp;&nbsp;&nbsp;&nbsp;A section at the end ...</td>
+        [^glossary]:glossary: Glossary
+        &nbsp;&nbsp;&nbsp;&nbsp;A section at the end ...</td>
 
         <td><p>Let&#8217;s reference a glossary term.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote glossary">[1]</a></p>
 
-		<div class="footnotes">
-		<hr />
-		<ol>
+        <div class="footnotes">
+        <hr />
+        <ol>
 
-		<li id="fn:1">
-		<span class="glossary name">Glossary</span>: <p>A section at the end &#8230; <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-		</li>
+        <li id="fn:1">
+        <span class="glossary name">Glossary</span>: <p>A section at the end &#8230; <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+        </li>
 
-		</ol>
-		</div>
+        </ol>
+        </div>
 
-		</td>
+        </td>
       </tr>
     </table>
   </div>
@@ -625,9 +641,9 @@ Orange
   <h2 class="section-name">Acknowledgement</h2>
 
   <div class="section">
-	<p>Based on the Human Markdown Reference by Édouard Brière.</p>
-	<p>https://github.com/edouard/human-markdown-reference</p>
-	<p>Modified for MultiMarkdown syntax by the MMD Community.</p>
+    <p>Based on the Human Markdown Reference by Édouard Brière.</p>
+    <p>https://github.com/edouard/human-markdown-reference</p>
+    <p>Modified for MultiMarkdown syntax by the MMD Community.</p>
     <p>For the first interaction I took examples from the following websites.</p>
 
     <dl>
