@@ -189,15 +189,10 @@
       </tr>
 
       <tr>
-        <td><p>When an image is placed in a paragraph by itself, it is wrapped in a &lt;figure&gt; tag.</p>
+        <td>When an image is placed in a paragraph, it is wrapped in a &lt;figure&gt; tag ![This is the figure caption][fig_id] [fig_id]: app_icon.png "This is where the title goes" height=80px width=80px</td>
 
-		<p>![This is the figure caption][fig_id]</p><p> [fig_id]: app_icon.png "This is where the title goes" height=80px width=80px</p></td>
-
-        <td><p>When an image is placed in a paragraph, it is wrapped in a &lt;figure&gt; tag.</p>
-
-		<figure>
-		<img src="app_icon.png" alt="This is the figure caption" id="fig_id" title="This is where the title goes" style="height:80px;width:80px;" />
-		<figcaption>This is the figure caption</figcaption></figure>
+        <td>
+          <p>When an image is placed in a paragraph, it is wrapped in a &lt;figure&gt; tag</p><img src="app_icon.png" alt="This is the figure caption" id="fig_id" title="This is where the title goes" style="height:80px;width:80px;" /> This is the figure caption
         </td>
       </tr>
     </table>
