@@ -57,4 +57,5 @@ where `xx` is the code of the locale you want to use.
 # Contributors
 
 * Alex Soulim (Russian translations),
-* Pere Joan Martorell (Catalan and Spanish translations).
+* Pere Joan Martorell (Catalan and Spanish translations)
+* Daniele Pitrolo (Italian translations).
