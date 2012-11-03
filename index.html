@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>MultiMarkdown Guide</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name = "viewport" content = "width = device-width">
-    <meta name = "viewport" content = "initial-scale = 1.0">
+    <meta name = "viewport" content = "width = device-width"/>
+    <meta name = "viewport" content = "initial-scale = 1.0"/>
     <link rel="stylesheet" type="text/css" media="screen" href="markdown-reference.css" />
     <script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="javascripts/guide.js"></script>
@@ -288,7 +288,6 @@
 | Content      | *Long Cell*                 ||  
 | Content      | **Cell**      | Cell         |  
 | New section  | More          | Data         |  
-| And more     | And more      |  
 [Prototype table][reference_table]
 </pre>
         </td>
@@ -386,12 +385,6 @@
                 <td style="text-align:center;">More</td>
 
                 <td style="text-align:right;">Data</td>
-              </tr>
-
-              <tr>
-                <td style="text-align:left;">And more</td>
-
-                <td style="text-align:center;">And more</td>
               </tr>
             </tbody>
           </table>
@@ -496,13 +489,13 @@
         [#fake]: John Doe. *A Totally Fake Book*.  Vanity Press, 2006.
         </td>
 
-        <td><p>Let&#8217;s cite a fake book.<a class="citation" href="#fn:1" title="Jump to citation">[<span class="locator">p. 42</span>, 1]<span class="citekey" style="display:none">fake</span></a></p>
+        <td><p>Let&#8217;s cite a fake book.<a class="citation" href="#fn:3" title="Jump to citation">[<span class="locator">p. 42</span>, 1]<span class="citekey" style="display:none">fake</span></a></p>
 
         <div class="footnotes">
         <hr />
         <ol>
 
-        <li id="fn:1" class="citation"><span class="citekey" style="display:none">fake</span><p>John Doe. <em>A Totally Fake Book</em>. Vanity Press, 2006.</p>
+        <li id="fn:3" class="citation"><span class="citekey" style="display:none">fake</span><p>John Doe. <em>A Totally Fake Book</em>. Vanity Press, 2006.</p>
         </li>
 
         </ol>
@@ -609,6 +602,26 @@ Orange
           <mn>0</mn>
         </math></td>
       </tr>
+
+      <tr>
+        <td>A formula, \\( {e}^{i\pi }+1=0 \\), inside a paragraph.</td>
+
+        <td><p>A formula, <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+          <msup>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>e</mi>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+              <mi>&#x03C0;<!-- π --></mi>
+            </mrow>
+          </msup>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo>=</mo>
+          <mn>0</mn>
+        </math>, inside a paragraph.</p></td>
+      </tr>
     </table>
   </div>
 
@@ -627,14 +640,14 @@ Orange
         [^glossary]:glossary: Glossary
         &nbsp;&nbsp;&nbsp;&nbsp;A section at the end ...</td>
 
-        <td><p>Let&#8217;s reference a glossary term.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote glossary">[1]</a></p>
+        <td><p>Let&#8217;s reference a glossary term.<a href="#fn:4" id="fnref:4" title="see footnote" class="footnote glossary">[1]</a></p>
 
         <div class="footnotes">
         <hr />
         <ol>
 
-        <li id="fn:1">
-        <span class="glossary name">Glossary</span>: <p>A section at the end &#8230; <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+        <li id="fn:4">
+        <span class="glossary name">Glossary</span>: <p>A section at the end &#8230; <a href="#fnref:4" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
         </li>
 
         </ol>
