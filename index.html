@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name = "viewport" content = "width = device-width"/>
     <meta name = "viewport" content = "initial-scale = 1.0"/>
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+	<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" type="text/css" media="screen" href="markdown-reference.css" />
     <script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="javascripts/guide.js"></script>
@@ -39,13 +42,13 @@
         </tr>
         <tr>
           <td>`This is some code.`</td>
-          <td><code>This is some code.</code></td>
+          <td><code class="no-highlight">This is some code.</code></td>
         </tr>
         <tr>
           <td>&nbsp;&nbsp;&nbsp;&nbsp;This is a rather<br />
           &nbsp;&nbsp;&nbsp;&nbsp;long section of code<br/>
           &nbsp;&nbsp;&nbsp;&nbsp;taking multiple lines</td>
-          <td><code>This is a rather<br />
+          <td><code class="no-highlight">This is a rather<br />
           long section of code<br />
           taking multiple lines</code></td>
         </tr>
@@ -622,6 +625,28 @@ Orange
           <mn>0</mn>
         </math>, inside a paragraph.</p></td>
       </tr>
+	  
+	  <tr>
+		  <td>x^2,y</td>
+		  <td><p>x<sup>2</sup>,y</p></td>
+	  </tr>
+
+	  <tr>
+		  <td>x^2,y^</td>
+		  <td><p>x<sup>2,y</sup></p></td>
+	  </tr>
+
+	  <tr>
+		  <td>x~z,y</td>
+		  <td><p>x<sub>z</sub>,y</p></td>
+	  </tr>
+
+	  <tr>
+		  <td>x~z,y~</td>
+		  <td><p>x<sub>z,y</sub></p></td>
+	  </tr>
+	  
+	  
     </table>
   </div>
 
@@ -657,6 +682,92 @@ Orange
       </tr>
     </table>
   </div>
+
+  <h2 class="section-name">CriticMarkup</h2>
+  
+  <div class="section">
+	  <table>
+		  <tr>
+			  <th>MultiMarkdown</th>
+			  
+			  <th>Result</th>
+		  </tr>
+		  
+		  <tr>
+			  <td>This is {--is --}a test.</td>
+			  <td><p>This is <del>is </del>a test.</p></td>
+		  </tr>
+
+		  <tr>
+			  <td>This {++is ++}a test.</td>
+			  <td><p>This <ins>is </ins>a test.</p></td>
+		  </tr>
+
+		  <tr>
+			  <td>This {~~isn't~>is~~} a test.</td>
+			  <td><p>This <del>isn&#8217;t</del><ins>is</ins> a test.</p></td>
+		  </tr>
+
+		  <tr>
+			  <td>This is a {==test==}.</td>
+			  <td><p>This is a <mark>test</mark>.</p></td>
+		  </tr>
+
+		  <tr>
+			  <td>This is a test{>>What is it a test of?<<}.</td>
+			  <td><p>This is a test.</p></td>
+		  </tr>
+
+	  </table>
+  </div>
+
+
+  <h2 class="section-name">Fenced Code Blocks</h2>
+  
+  <div class="section">
+	  <table>
+		  <tr>
+			  <th>MultiMarkdown</th>
+			  
+			  <th>Result</th>
+		  </tr>
+		  
+		  <tr>
+			  <td>```</br>
+This is a fenced</br>
+code block</br>
+```</td>
+			  
+			  <td><pre><code class="no-highlight">This is a fenced
+code block
+</code></pre></td>
+</tr>
+
+		  <tr>
+			  <td>```perl</br>
+# Demonstrate Syntax Highlighting if you link to highlight.js #</br>
+# http://softwaremaniacs.org/soft/highlight/en/</br>
+print "Hello, world!\n";</br>
+$a = 0;</br>
+while ($a < 10) {</br>
+	print "$a...\n";</br>
+	$a++;</br>
+}</br>
+```</td>
+			  
+			  <td><pre><code class="perl"># Demonstrate Syntax Highlighting if you link to highlight.js #
+# http://softwaremaniacs.org/soft/highlight/en/
+print &quot;Hello, world!\n&quot;;
+$a = 0;
+while ($a &lt; 10) {
+    print &quot;$a...\n&quot;;
+    $a++;
+}
+</code></pre></td>
+</tr>
+
+</table>
+</div>
 
   <h2 class="section-name">Acknowledgements</h2>
 
