@@ -81,7 +81,7 @@ table {
     text-align: left;
   }
   
-  tr.alternate {
+  tr:nth-child(odd) {
     background-color: #f1f5fa;
   }
 

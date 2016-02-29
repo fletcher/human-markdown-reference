@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="it" lang="it" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Guida per Markdown</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <link href="../stylesheets/markdown-reference.css" rel="stylesheet" media="screen" type="text/css" />
+    <script src="../javascripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="../javascripts/guide.js" type="text/javascript"></script>
+  </head>
+  <body>
+    
+    <h1 id="title">Guida per Markdown</h1>
+    
+    <h2 class="section-name">Testo</h2>
+    
+    <div class="section">
+      <table>
+        <tr>
+          <th>Markdown</th>
+          <th>Risultato</th>
+        </tr>
+        <tr>
+          <td>Questo testo è in **grassetto**.</td>
+          <td>Questo testo è in <strong>grassetto</strong>.</td>
+        </tr>
+        <tr class="alternate">
+          <td>Questo testo è in *corsivo*.</td>
+          <td>Questo testo è in <em>corsivo.</em>.</td>
+        </tr>
+        <tr>
+          <td>`Questo è codice.`</td>
+          <td><code>Questo è codice.</code></td>
+        </tr>
+      </table>
+    </div>
+    
+    <h2 class="section-name">Titoli dei capitoli</h2>
+    
+    <div class="section">
+      <table>
+        <tr>
+          <th>Markdown</th>
+          <th>Risultato</th>
+        </tr>
+        <tr>
+          <td># Titolo di primo livello</td>
+          <td><h1>Titolo di primo livello</h1></td>
+        </tr>
+        <tr class="alternate">
+          <td>## Titolo di secondo livello</td>
+          <td><h2>Titolo di secondo livello</h2></td>
+        </tr>
+        <tr>
+          <td>### Titolo di terzo livello</td>
+          <td><h3>Titolo di terzo livello</h3></td>
+        </tr>
+      </table>
+    </div>
+    
+    <h2 class="section-name">Citazioni</h2>
+    
+    <div class="section">
+      <table>
+        <tr class="alternate">
+          <td>
+            > Questo è il primo livello di citazione.<br />
+            >> Questa è una citazione ulteriore.<br />
+            > Ritorno al primo livello.
+            </td>
+          <td>
+            <blockquote>
+              Questo è il primo livello di citazione.
+              <blockquote>Questa è una citazione ulteriore.</blockquote>
+              Ritorno al primo livello.
+            </blockquote>
+          </td>
+        </tr>        
+      </table>
+    </div>
+    
+    <h2 class="section-name">Rinvii ed immagini</h2>
+    
+    <div class="section">
+      <table>
+        <tr>
+          <td>Rinvio verso [Google](http://google.fr).</td>
+          <td>Rinvio verso <a href="http://google.fr" target="_blank">Google</a>.</td>
+        </tr>
+        <tr>
+          <td>Inviatemi un'e-mail a &lt;indirizzo@esempio.com&gt;.</td>
+          <td>Inviatemi un'e-mail a  <a href="mailto:indirizzo@esempio.com">indirizzo@esempio.com</a> .</td>
+        </tr>
+        <tr>
+          <td>![Logo di 37signals](http://www.37signals.com/images/logo-37signals.png)</td>
+          <td><img src="http://www.37signals.com/images/logo-37signals.png" alt="Logo di 37signals" /></td>
+        </tr>
+      </table>
+    </div>
+    
+    <h2 class="section-name">Liste</h2>
+    
+    <div class="section">
+      <table>
+        <tr>
+          <th>Markdown</th>
+          <th>Risultato</th>
+        </tr>
+        <tr>
+          <td>* Latte<br />
+* Pane<br />
+* Formaggio<br />
+&nbsp;&nbsp;* Ricotta<br /> 
+&nbsp;&nbsp;* Parmigiano<br />
+* Riso</td>
+          <td>
+            <ul>
+              <li>Latte</li>
+              <li>Pane</li>
+              <li>Formaggio
+                <ul>
+                  <li>Ricotta</li>
+                  <li>Parmigiano</li>
+                </ul>
+              </li>
+              <li>Riso</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="alternate">
+          <td>1. Latte <br />
+2. Pane <br />
+3. Formaggio <br />
+&nbsp;&nbsp;1. Ricotta <br />
+&nbsp;&nbsp;2. Parmigiano <br />
+4. Riso</td>
+          <td>
+            <ol>
+              <li>Latte</li>
+              <li>Pane</li>
+              <li>Formaggio
+                <ol>
+                  <li>Ricotta</li>
+                  <li>Parmigiano</li>
+                </ol>
+              </li>
+              <li>Riso</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </div>
+            
+  </body>
+</html>
