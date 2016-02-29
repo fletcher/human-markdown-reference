@@ -23,17 +23,75 @@
           <td>Ce texte est en **gras**.</td>
           <td>Ce texte est en <strong>gras</strong>.</td>
         </tr>
-        <tr class="alternate">
+        <tr>
+          <td>Ce texte est aussi en __bold__.</td>
+          <td>Ce texte est aussi en <strong>gras</strong>.</td>
+        </tr>
+        <tr>
           <td>Ce texte est en *italique*.</td>
           <td>Ce texte est en <em>italique.</em>.</td>
+        </tr>
+        <tr>
+          <td>Ce texte est aussi en _italique_.</td>
+          <td>Ce texte est aussi en <em>italique.</em>.</td>
         </tr>
         <tr>
           <td>`Ceci est du code.`</td>
           <td><code>Ceci est du code.</code></td>
         </tr>
+        <tr>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;Ceci est une section<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;de code plutôt longue<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;sur plusieurs lignes</td>
+          <td><code class="no-highlight">Ceci est une section<br />
+          de code plutôt longue<br />
+          sur plusieurs lignes</code></td>
+        </tr>
       </table>
     </div>
     
+  <h2 class="section-name">Liens</h2>
+
+  <div class="section">
+    <table>
+      <tr>
+        <th>MultiMarkdown</th>
+
+        <th>Résultat</th>
+      </tr>
+
+      <tr>
+        <td>Lien vers [Google](http://google.com).</td>
+
+        <td>Lien vers <a href="http://google.com">Google</a>.</td>
+      </tr>
+
+      <tr>
+        <td>Lien vers &lt;http://google.com&gt;.</td>
+
+        <td>Lien vers <a href="http://google.com">http://google.com</a>.</td>
+      </tr>
+
+      <tr>
+        <td>Lien vers [Google][] avec des attributs plus loin dans le document.<br />
+        <br />
+        Un autre lien vers le [moteur de recherche][Google].<br /><br />
+        [Google]: http://google.com "Le Google!" style="border: solid black 1px;" target="_blank"</td>
+
+        <td>
+          <p>Lien vers <a href="http://google.com" title="Le Google!" style="border: solid black 1px;" target="_blank">Google</a> avec des attributs plus loin dans le document.</p>
+          <p>Un autre lien vers le <a href="http://google.com" title="Le Google!" style="border: solid black 1px;" target="_blank">moteur de recherche</a>.</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Envoyez-moi un e-mail à &lt;addresse@example.com&gt;.</td>
+
+        <td>Envoyez-moi un e-mail à <a href="mailto:addresse@example.com">addresse@example.com</a>.</td>
+      </tr>
+    </table>
+  </div>
+  
     <h2 class="section-name">Têtes de chapitre</h2>
     
     <div class="section">
